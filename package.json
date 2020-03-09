@@ -12,7 +12,8 @@
       "rest",
       "api",
       "sequelize",
-      "mysql"
+      "mysql",
+      "jsonwebtoken"
     ],
     "author": "thedevtron",
     "license": "ISC",
