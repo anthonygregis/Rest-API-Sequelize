@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://api.nopixel.online/"
+  origin: "http://nopixel.online/"
 };
 
 app.use(cors(corsOptions));
