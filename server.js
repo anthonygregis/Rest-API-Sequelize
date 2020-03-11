@@ -4,9 +4,16 @@ const cors = require("cors");
 
 const app = express();
 
+var whitelist = ['http://dev.nopixel.online', 'http://nopixel.online']
 var corsOptions = {
-  origin: "http://nopixel.online/"
-};
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
 
 app.use(cors(corsOptions));
 
